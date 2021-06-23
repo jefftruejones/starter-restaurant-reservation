@@ -1,6 +1,6 @@
 header {
-  background-color: rgb(124, 149, 171);
-
+  background-color: rgb(124, 149, 171, 0.9);
+  max-height: 15em;
   flex: 1;
   width: 100%;
   margin: 0;
@@ -96,7 +96,7 @@ li {
   padding: 0.5em;
 }
 .button:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   transition: 0.3s;
 }
 

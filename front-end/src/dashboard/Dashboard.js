@@ -4,6 +4,7 @@ import { previous, next, today } from "../utils/date-time";
 import ErrorAlert from "../layout/ErrorAlert";
 import ReservationRow from "./ReservationRow";
 import TableRow from "./TableRow";
+import "./Dashboard.css";
 
 /**
  * Defines the dashboard page.
@@ -63,52 +64,54 @@ function Dashboard({
   }
 
   return (
-    <main>
+    <main className="main">
       <h1>Dashboard</h1>
 
-      <h4 className="mb-0">Reservations for {date}</h4>
+      <h4>Reservations for {date}</h4>
 
-      <button
-        className="btn btn-secondary m-1"
-        type="button"
-        name="previous"
-        onClick={handleClick}
-      >
-        Previous
-      </button>
-      <button
-        className="btn btn-primary m-1"
-        type="button"
-        name="today"
-        onClick={handleClick}
-      >
-        Today
-      </button>
-      <button
-        className="btn btn-secondary m-1"
-        type="button"
-        name="next"
-        onClick={handleClick}
-      >
-        Next
-      </button>
+      <div className="buttons">
+        <button
+          className="buttonDash"
+          type="button"
+          name="previous"
+          onClick={handleClick}
+        >
+          Previous
+        </button>
+        <button
+          className="buttonDash"
+          type="button"
+          name="today"
+          onClick={handleClick}
+        >
+          Today
+        </button>
+        <button
+          className="buttonDash"
+          type="button"
+          name="next"
+          onClick={handleClick}
+        >
+          Next
+        </button>
+      </div>
 
       <ErrorAlert error={reservationsError} />
 
-      <table className="table table-hover m-1 ">
-        <thead className="thead-light">
+      <table>
+        <thead>
           <tr>
-            <th scope="col">ID</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Mobile Number</th>
-            <th scope="col">Date</th>
-            <th scope="col">Time</th>
-            <th scope="col">People</th>
-            <th scope="col">Status</th>
-            <th scope="col">Edit</th>
-            <th scope="col">Cancel</th>
-            <th scope="col">Seat</th>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Mobile Number</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>People</th>
+            <th>Status</th>
+            <th>Edit</th>
+            <th>Cancel</th>
+            <th>Seat</th>
           </tr>
         </thead>
 
@@ -118,19 +121,19 @@ function Dashboard({
       <br />
       <br />
 
-      <h4 className="mb-0">Tables</h4>
+      <h4>Tables</h4>
 
       <ErrorAlert error={tablesError} />
 
-      <table className="table table-hover m-1">
-        <thead className="thead-light">
+      <table>
+        <thead>
           <tr>
-            <th scope="col">Table ID</th>
-            <th scope="col">Table Name</th>
-            <th scope="col">Capacity</th>
-            <th scope="col">Status</th>
-            <th scope="col">Reservation ID</th>
-            <th scope="col">Finish</th>
+            <th>Table ID</th>
+            <th>Table Name</th>
+            <th>Capacity</th>
+            <th>Status</th>
+            <th>Reservation ID</th>
+            <th>Finish</th>
           </tr>
         </thead>
 

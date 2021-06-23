@@ -16,11 +16,7 @@ function Layout() {
     <div className="container">
       <Menu />
 
-      <div className="row">
-        <div>
-          <Routes />
-        </div>
-      </div>
+      <Routes />
     </div>
   );
 }

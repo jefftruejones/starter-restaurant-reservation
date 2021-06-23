@@ -31,7 +31,7 @@ export default function ReservationRow({ reservation, loadDashboard }) {
 
   return (
     <tr>
-      <th scope="row">{reservation.reservation_id}</th>
+      <th>{reservation.reservation_id}</th>
       <td>{reservation.first_name}</td>
       <td>{reservation.last_name}</td>
       <td>{reservation.mobile_number}</td>
@@ -46,15 +46,12 @@ export default function ReservationRow({ reservation, loadDashboard }) {
         <>
           <td>
             <Link to={`/reservations/${reservation.reservation_id}/edit`}>
-              <button className="btn btn-secondary" type="button">
-                Edit
-              </button>
+              <button type="button">Edit</button>
             </Link>
           </td>
 
           <td>
             <button
-              className="btn btn-danger"
               type="button"
               onClick={handleCancel}
               data-reservation-id-cancel={reservation.reservation_id}
@@ -65,9 +62,7 @@ export default function ReservationRow({ reservation, loadDashboard }) {
 
           <td>
             <a href={`/reservations/${reservation.reservation_id}/seat`}>
-              <button className="btn btn-primary" type="button">
-                Seat
-              </button>
+              <button type="button">Seat</button>
             </a>
           </td>
         </>
