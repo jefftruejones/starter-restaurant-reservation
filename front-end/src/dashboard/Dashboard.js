@@ -95,7 +95,7 @@ function Dashboard({
 
       <ErrorAlert error={reservationsError} />
 
-      <table className="table table-hover m-1">
+      <table className="table table-hover m-1 ">
         <thead className="thead-light">
           <tr>
             <th scope="col">ID</th>
