@@ -9,6 +9,7 @@
 ## API Documentation
 
 ###Resources
+
 >Reservations - these are the reservations entered by the user
 >Tables - these are the tables a restaurant has, also entered by the user
 
