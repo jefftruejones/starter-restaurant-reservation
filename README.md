@@ -12,12 +12,33 @@
 
 ### Reservations
 
-###Tables
+Reservations are how a user schedules and keeps track of when people are coming to dine at the restaurant
 
+#### Available Methods
 
-                            |
+GET /reservations -> returns all reservations
 
+GET /reservations?date={date} -> returns all reservations for that date in the format date=YYYY-MM-DD
 
+POST /reservations -> creates a new reservation
+
+PUT /reservations/{reservation_id} -> Edits a specific reservation
+
+PUT /reservations/{reservation_id}/status -> Updates status of a specific reservation
+
+### Tables
+
+Tables are where a user will seat people coming to dine at the restaurant.
+
+#### Available Methods
+
+GET /tables -> returns all the tables that have been created
+
+POST /tables -> creates a new tables
+
+PUT /tables/{table_id}/seat -> assigns a reservations to a table
+
+DELETE /tables/{table_id}/seat -> removes a reservation from a table
 
 ## Database setup
 
