@@ -15,7 +15,7 @@ function Menu() {
   const clickHandler = () => {
     setClicked((prev) => !prev);
   };
-  console.log(clicked);
+
   return (
     <header>
       <Link className="Link2" to="/">
