@@ -43,7 +43,7 @@ DELETE /tables/{table_id}/seat -> removes a reservation from a table
 ## Screenshots
 
 Dashboard: 
-![Dashboard}(dashboard.png)
+![Dashboard](dashboard.png)
 
 
 
