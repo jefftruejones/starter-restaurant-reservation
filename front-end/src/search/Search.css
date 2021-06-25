@@ -7,8 +7,46 @@
   max-width: 1400px;
   margin: auto;
 }
-.reservations {
+.searchForm {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  transition: 0.3s;
+  width: 20em;
+  min-height: 12em;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-top: 2em;
+  background-color: rgba(178, 178, 206, 0.6);
+}
+label {
   margin-top: 1em;
+}
+input {
+  margin-top: 1em;
+}
+.searchButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+button {
+  margin-top: 1em;
+
+  width: 5em;
+  background-color: white;
+  margin: auto;
+  text-align: center;
+  border: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.6s;
+  margin-right: 1em;
+  margin-left: 1em;
 }
 table {
   max-width: 1000px;
@@ -52,27 +90,6 @@ th {
   color: rgb(25, 25, 79);
 }
 
-h4 {
-  text-align: center;
-  margin: 0.25em;
-}
-.buttons {
-  display: flex;
-  justify-content: center;
-  margin: 1.5em;
-}
-.buttonDash {
-  margin-right: 0.5em;
-  border: 0;
-  padding: 0.5em;
-  background-color: rgb(92, 125, 157);
-  color: white;
-  min-width: 6em;
-}
-.buttonDash:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
-  transition: 0.3s;
-}
 td button {
   border: 0;
   background-color: rgb(92, 125, 157);
@@ -118,5 +135,15 @@ td button {
   }
   th {
     width: 1em;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .searchForm {
+    width: 7em;
+  }
+  button {
+    margin-right: 1em;
+    margin-left: 1em;
   }
 }

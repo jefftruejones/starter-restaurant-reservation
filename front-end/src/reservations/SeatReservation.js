@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import ErrorAlert from "../layout/ErrorAlert";
 import { listReservations, seatTable } from "../utils/api";
-
+import "./SeatReservation.css";
 /**
  * On this page, the user chooses a table to seat a reservation at.
  */
@@ -105,39 +105,32 @@ export default function SeatReservation({ tables, loadDashboard }) {
   };
 
   return (
-    <form className="form-select">
-      {errorsJSX()}
-      <ErrorAlert error={apiError} />
-      <ErrorAlert error={reservationsError} />
+    <main className="main">
+      <form className="seatForm">
+        {errorsJSX()}
+        <ErrorAlert error={apiError} />
+        <ErrorAlert error={reservationsError} />
 
-      <label className="form-label" htmlFor="table_id">
-        Choose table:
-      </label>
-      <select
-        className="form-control"
-        name="table_id"
-        id="table_id"
-        value={table_id}
-        onChange={handleChange}
-      >
-        <option value={0}>Choose a table</option>
-        {tableOptionsJSX()}
-      </select>
-
-      <button
-        className="btn btn-primary m-1"
-        type="submit"
-        onClick={handleSubmit}
-      >
-        Submit
-      </button>
-      <button
-        className="btn btn-danger m-1"
-        type="button"
-        onClick={history.goBack}
-      >
-        Cancel
-      </button>
-    </form>
+        <label>Choose table:</label>
+        <select
+          name="table_id"
+          id="table_id"
+          value={table_id}
+          onChange={handleChange}
+        >
+          <option value={0}>Choose a table</option>
+          {tableOptionsJSX()}
+        </select>
+        <div className="buttons">
+          {" "}
+          <button type="submit" onClick={handleSubmit}>
+            Submit
+          </button>
+          <button type="button" onClick={history.goBack}>
+            Cancel
+          </button>
+        </div>
+      </form>
+    </main>
   );
 }

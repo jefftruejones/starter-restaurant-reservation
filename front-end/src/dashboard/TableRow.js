@@ -32,7 +32,7 @@ export default function TableRow({ table, loadDashboard }) {
       <td data-table-id-status={table.table_id}>{table.status}</td>
       <td>{table.reservation_id ? table.reservation_id : "--"}</td>
 
-      {table.status === "occupied" && (
+      {table.status === "occupied" ? (
         <td>
           <button
             data-table-id-finish={table.table_id}
@@ -42,6 +42,8 @@ export default function TableRow({ table, loadDashboard }) {
             Finish
           </button>
         </td>
+      ) : (
+        <td>--</td>
       )}
     </tr>
   );

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import ErrorAlert from "../layout/ErrorAlert";
 import { createTable } from "../utils/api";
+import "./NewTable.css";
 
 /**
  * A page that allows the user to create a new table.
@@ -63,51 +64,55 @@ export default function NewTable({ loadDashboard }) {
   }
 
   return (
-    <form>
-      <ErrorAlert error={error} />
+    <main className="main">
+      <form className="tableForm">
+        <ErrorAlert error={error} />
 
-      <label className="form-label" htmlFor="table_name">
-        Table Name:&nbsp;
-      </label>
-      <input
-        className="form-control"
-        name="table_name"
-        id="table_name"
-        type="text"
-        minLength={2}
-        onChange={handleChange}
-        value={formData.table_name}
-        required
-      />
+        <label className="form-label" htmlFor="table_name">
+          Table Name:&nbsp;
+        </label>
+        <input
+          className="form-control"
+          name="table_name"
+          id="table_name"
+          type="text"
+          minLength={2}
+          onChange={handleChange}
+          value={formData.table_name}
+          required
+        />
 
-      <label className="form-label" htmlFor="capacity">
-        Capacity:&nbsp;
-      </label>
-      <input
-        className="form-control"
-        name="capacity"
-        id="capacity"
-        type="number"
-        min={1}
-        onChange={handleChange}
-        value={formData.capacity}
-        required
-      />
+        <label className="form-label" htmlFor="capacity">
+          Capacity:&nbsp;
+        </label>
+        <input
+          className="form-control"
+          name="capacity"
+          id="capacity"
+          type="number"
+          min={1}
+          onChange={handleChange}
+          value={formData.capacity}
+          required
+        />
 
-      <button
-        className="btn btn-primary m-1"
-        type="submit"
-        onClick={handleSubmit}
-      >
-        Submit
-      </button>
-      <button
-        className="btn btn-danger m-1"
-        type="button"
-        onClick={history.goBack}
-      >
-        Cancel
-      </button>
-    </form>
+        <div className="buttons">
+          <button
+            className="btn btn-primary m-1"
+            type="submit"
+            onClick={handleSubmit}
+          >
+            Submit
+          </button>
+          <button
+            className="btn btn-danger m-1"
+            type="button"
+            onClick={history.goBack}
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </main>
   );
 }

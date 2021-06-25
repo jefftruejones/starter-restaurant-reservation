@@ -42,7 +42,7 @@ export default function ReservationRow({ reservation, loadDashboard }) {
         {reservation.status}
       </td>
 
-      {reservation.status === "booked" && (
+      {reservation.status === "booked" ? (
         <>
           <td>
             <Link to={`/reservations/${reservation.reservation_id}/edit`}>
@@ -65,6 +65,12 @@ export default function ReservationRow({ reservation, loadDashboard }) {
               <button type="button">Seat</button>
             </a>
           </td>
+        </>
+      ) : (
+        <>
+          <td>--</td>
+          <td>--</td>
+          <td>--</td>
         </>
       )}
     </tr>

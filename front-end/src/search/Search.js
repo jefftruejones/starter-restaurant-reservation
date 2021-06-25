@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ErrorAlert from "../layout/ErrorAlert";
 import { listReservations } from "../utils/api";
 import ReservationRow from "../dashboard/ReservationRow";
-
+import "./Search.css";
 /**
  * A page where a user can search a reservation by mobile number.
  */
@@ -51,15 +51,14 @@ export default function Search() {
   };
 
   return (
-    <div>
-      <form>
+    <main className="main">
+      <form className="searchForm">
         <ErrorAlert error={error} />
 
-        <label className="form-label" htmlFor="mobile_number">
+        <label c htmlFor="mobile_number">
           Enter a customer's phone number:
         </label>
         <input
-          className="form-control"
           name="mobile_number"
           id="mobile_number"
           type="tel"
@@ -67,35 +66,33 @@ export default function Search() {
           value={mobileNumber}
           required
         />
-
-        <button
-          className="btn btn-primary m-1"
-          type="submit"
-          onClick={handleSubmit}
-        >
-          Find
-        </button>
+        <div className="searchButton">
+          {" "}
+          <button type="submit" onClick={handleSubmit}>
+            Find
+          </button>
+        </div>
       </form>
 
-      <table className="table table-hover m-1">
-        <thead className="thead-light">
+      <table>
+        <thead>
           <tr>
-            <th scope="col">ID</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Mobile Number</th>
-            <th scope="col">Date</th>
-            <th scope="col">Time</th>
-            <th scope="col">People</th>
-            <th scope="col">Status</th>
-            <th scope="col">Edit</th>
-            <th scope="col">Cancel</th>
-            <th scope="col">Seat</th>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Mobile Number</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>People</th>
+            <th>Status</th>
+            <th>Edit</th>
+            <th>Cancel</th>
+            <th>Seat</th>
           </tr>
         </thead>
 
         <tbody>{searchResultsJSX()}</tbody>
       </table>
-    </div>
+    </main>
   );
 }

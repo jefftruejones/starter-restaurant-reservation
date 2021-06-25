@@ -69,6 +69,45 @@ function Dashboard({
 
       <h4>Reservations for {date}</h4>
 
+      <ErrorAlert error={reservationsError} />
+
+      <table className="reservations">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Mobile Number</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>People</th>
+            <th>Status</th>
+            <th>Edit</th>
+            <th>Cancel</th>
+            <th>Seat</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {reservations.length ? (
+            reservationsJSX()
+          ) : (
+            <tr>
+              <th>--</th>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+            </tr>
+          )}
+        </tbody>
+      </table>
       <div className="buttons">
         <button
           className="buttonDash"
@@ -95,32 +134,6 @@ function Dashboard({
           Next
         </button>
       </div>
-
-      <ErrorAlert error={reservationsError} />
-
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Mobile Number</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>People</th>
-            <th>Status</th>
-            <th>Edit</th>
-            <th>Cancel</th>
-            <th>Seat</th>
-          </tr>
-        </thead>
-
-        <tbody>{reservationsJSX()}</tbody>
-      </table>
-
-      <br />
-      <br />
-
       <h4>Tables</h4>
 
       <ErrorAlert error={tablesError} />
@@ -137,7 +150,20 @@ function Dashboard({
           </tr>
         </thead>
 
-        <tbody>{tablesJSX()}</tbody>
+        <tbody>
+          {tables.length ? (
+            tablesJSX()
+          ) : (
+            <tr>
+              <th>--</th>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+            </tr>
+          )}
+        </tbody>
       </table>
     </main>
   );

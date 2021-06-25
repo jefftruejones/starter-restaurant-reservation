@@ -1,6 +1,6 @@
 header {
   background-color: rgb(124, 149, 171, 0.9);
-  max-height: 15em;
+  max-height: 20em;
   flex: 1;
   width: 100%;
   margin: 0;
@@ -18,6 +18,7 @@ nav {
   justify-content: center;
   animation-duration: 1.5s;
   animation-name: slidein;
+  margin-bottom: 1em;
 }
 @keyframes slideinColor {
   from {
