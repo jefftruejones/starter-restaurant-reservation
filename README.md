@@ -45,6 +45,16 @@ DELETE /tables/{table_id}/seat -> removes a reservation from a table
 Dashboard: 
 ![Dashboard](https://github.com/jefftruejones/starter-restaurant-reservation/blob/main/front-end/public/dashboard.png)
 
+Create Reservation:
+![CreateReservation](https://github.com/jefftruejones/starter-restaurant-reservation/blob/main/front-end/public/createreservation.png)
+
+Search:
+![Search](https://github.com/jefftruejones/starter-restaurant-reservation/blob/main/front-end/public/search.png)
+
+Create Table:
+![CreateTable](https://github.com/jefftruejones/starter-restaurant-reservation/blob/main/front-end/public/createtable.png)
+
+
 
 
 ## Database setup
