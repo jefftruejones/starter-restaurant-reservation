@@ -8,7 +8,7 @@
 
 ## API Documentation
 
-## Resources
+## Resources: Reservations and Tables
 
 ### Reservations
 
@@ -39,6 +39,10 @@ POST /tables -> creates a new tables
 PUT /tables/{table_id}/seat -> assigns a reservations to a table
 
 DELETE /tables/{table_id}/seat -> removes a reservation from a table
+
+## Screenshots
+
+
 
 ## Database setup
 
